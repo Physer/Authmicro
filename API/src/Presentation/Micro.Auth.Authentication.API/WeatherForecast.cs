@@ -1,6 +1,6 @@
 using System;
 
-namespace Micro.Auth.Authorization.API
+namespace Micro.Auth.Authentication.API
 {
     public class WeatherForecast
     {

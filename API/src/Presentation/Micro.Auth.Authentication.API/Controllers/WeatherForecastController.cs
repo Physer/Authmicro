@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Micro.Auth.Authorization.API.Controllers
+namespace Micro.Auth.Authentication.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

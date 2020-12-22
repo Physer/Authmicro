@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Micro.Auth.Authorization.API
+namespace Micro.Auth.Authentication.API
 {
     public class Program
     {

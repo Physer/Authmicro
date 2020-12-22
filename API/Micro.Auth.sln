@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Content.API", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Products.API", "src\Presentation\Micro.Auth.Products.API\Micro.Auth.Products.API.csproj", "{AC7C4C51-F51B-4ECE-9769-8BA57676EA09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Authorization.API", "src\Presentation\Micro.Auth.Authorization.API\Micro.Auth.Authorization.API.csproj", "{03373B09-5E25-4D63-8126-48BC535E232D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Authentication.API", "src\Presentation\Micro.Auth.Authentication.API\Micro.Auth.Authentication.API.csproj", "{1D21E035-CF20-4719-918D-564BE9D14572}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,10 @@ Global
 		{AC7C4C51-F51B-4ECE-9769-8BA57676EA09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC7C4C51-F51B-4ECE-9769-8BA57676EA09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC7C4C51-F51B-4ECE-9769-8BA57676EA09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03373B09-5E25-4D63-8126-48BC535E232D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03373B09-5E25-4D63-8126-48BC535E232D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03373B09-5E25-4D63-8126-48BC535E232D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03373B09-5E25-4D63-8126-48BC535E232D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D21E035-CF20-4719-918D-564BE9D14572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D21E035-CF20-4719-918D-564BE9D14572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D21E035-CF20-4719-918D-564BE9D14572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D21E035-CF20-4719-918D-564BE9D14572}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,7 +52,7 @@ Global
 		{2011FB25-C165-4CEB-84D8-91AD76406D68} = {379478E1-EEAD-4C43-AD5A-E26332D6DC5D}
 		{A73BF88B-5588-44D6-913A-9764917478EA} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
 		{AC7C4C51-F51B-4ECE-9769-8BA57676EA09} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
-		{03373B09-5E25-4D63-8126-48BC535E232D} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
+		{1D21E035-CF20-4719-918D-564BE9D14572} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {265DF246-F8DB-4AAA-9629-3CAECC64EB14}
