@@ -1,6 +1,4 @@
-﻿using System.Security;
-
-namespace Micro.Auth.Authentication.API.Models
+﻿namespace Micro.Auth.Authentication.API.Models
 {
     public class AuthenticationRequest
     {

@@ -1,7 +1,9 @@
-﻿namespace Micro.Auth.Application.Interfaces
+﻿using Micro.Auth.Application.Authentication;
+
+namespace Micro.Auth.Application.Interfaces
 {
     public interface IAuthenticationService
     {
-        void Authenticate(string username, string password);
+        TokenResponse Authenticate(string username, string password);
     }
 }

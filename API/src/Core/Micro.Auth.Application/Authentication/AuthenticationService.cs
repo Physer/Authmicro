@@ -8,6 +8,13 @@ namespace Micro.Auth.Application.Authentication
 {
     public class AuthenticationService : IAuthenticationService
     {
+        private readonly ITokenGenerator _tokenGenerator;
+
+        public AuthenticationService(ITokenGenerator tokenGenerator)
+        {
+            _tokenGenerator = tokenGenerator;
+        }
+
         private readonly IEnumerable<User> _users = new List<User>
         {
             new User
@@ -28,10 +35,13 @@ namespace Micro.Auth.Application.Authentication
             }
         };
 
-        public void Authenticate(string username, string password)
+        public TokenResponse Authenticate(string username, string password)
         {
             if (_users.SingleOrDefault(user => user.Username.Equals(username) && user.Password.Equals(password)) == null)
                 throw new SecurityException("Invalid credentials");
+
+            var accessToken = _tokenGenerator.GenerateToken(username);
+            return new TokenResponse(accessToken);
         }
     }
 }
