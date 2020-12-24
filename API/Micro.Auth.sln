@@ -7,15 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{379478E1-EEAD-4C43-AD5A-E26332D6DC5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Domain", "src\Core\Micro.Auth.Domain\Micro.Auth.Domain.csproj", "{706E9C0F-962D-47E6-830F-112E6626BC4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Micro.Auth.Domain", "src\Core\Micro.Auth.Domain\Micro.Auth.Domain.csproj", "{706E9C0F-962D-47E6-830F-112E6626BC4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Application", "src\Core\Micro.Auth.Application\Micro.Auth.Application.csproj", "{2011FB25-C165-4CEB-84D8-91AD76406D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Micro.Auth.Application", "src\Core\Micro.Auth.Application\Micro.Auth.Application.csproj", "{2011FB25-C165-4CEB-84D8-91AD76406D68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Content.API", "src\Presentation\Micro.Auth.Content.API\Micro.Auth.Content.API.csproj", "{A73BF88B-5588-44D6-913A-9764917478EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Micro.Auth.Content.API", "src\Presentation\Micro.Auth.Content.API\Micro.Auth.Content.API.csproj", "{A73BF88B-5588-44D6-913A-9764917478EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Products.API", "src\Presentation\Micro.Auth.Products.API\Micro.Auth.Products.API.csproj", "{AC7C4C51-F51B-4ECE-9769-8BA57676EA09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Micro.Auth.Products.API", "src\Presentation\Micro.Auth.Products.API\Micro.Auth.Products.API.csproj", "{AC7C4C51-F51B-4ECE-9769-8BA57676EA09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Authentication.API", "src\Presentation\Micro.Auth.Authentication.API\Micro.Auth.Authentication.API.csproj", "{1D21E035-CF20-4719-918D-564BE9D14572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Micro.Auth.Authentication.API", "src\Presentation\Micro.Auth.Authentication.API\Micro.Auth.Authentication.API.csproj", "{1D21E035-CF20-4719-918D-564BE9D14572}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Startup", "Startup", "{59C68047-6574-4AA2-B448-5754F1F0C5D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Startup", "src\Startup\Micro.Auth.Startup\Micro.Auth.Startup.csproj", "{FC5F920D-7AA4-4F19-ADAB-7CF13EE48097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{1D21E035-CF20-4719-918D-564BE9D14572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D21E035-CF20-4719-918D-564BE9D14572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D21E035-CF20-4719-918D-564BE9D14572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC5F920D-7AA4-4F19-ADAB-7CF13EE48097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5F920D-7AA4-4F19-ADAB-7CF13EE48097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5F920D-7AA4-4F19-ADAB-7CF13EE48097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5F920D-7AA4-4F19-ADAB-7CF13EE48097}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{A73BF88B-5588-44D6-913A-9764917478EA} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
 		{AC7C4C51-F51B-4ECE-9769-8BA57676EA09} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
 		{1D21E035-CF20-4719-918D-564BE9D14572} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
+		{FC5F920D-7AA4-4F19-ADAB-7CF13EE48097} = {59C68047-6574-4AA2-B448-5754F1F0C5D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {265DF246-F8DB-4AAA-9629-3CAECC64EB14}
