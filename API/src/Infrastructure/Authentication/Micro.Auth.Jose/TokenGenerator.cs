@@ -19,7 +19,7 @@ namespace Micro.Auth.Jose
             _authenticationOptions = authenticationOptions.Value;
         }
 
-        public string GenerateToken(string username, Audience audience)
+        public string GenerateToken(string username, Audience audience, IEnumerable<string> roles)
         {
             if (string.IsNullOrWhiteSpace(username))
                 throw new Exception("No username provided");
@@ -36,7 +36,8 @@ namespace Micro.Auth.Jose
                 { "sub", username },
                 { "exp", expiryTimestamp },
                 { "iss", _authenticationOptions.Issuer },
-                { "aud", audience.ToString() }
+                { "aud", audience.ToString() },
+                { "roles", roles }
             };
 
             var secretKey = Encoding.UTF8.GetBytes(_authenticationOptions.Secret);

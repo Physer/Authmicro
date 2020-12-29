@@ -6,7 +6,7 @@ namespace Micro.Auth.Administration.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
+    [Authorize(Policy = AuthenticationConstants.AdministratorPolicyName)]
     public class AdministrationController : ControllerBase
     {
         [HttpGet]

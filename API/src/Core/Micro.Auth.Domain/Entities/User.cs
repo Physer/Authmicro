@@ -1,4 +1,6 @@
-﻿namespace Micro.Auth.Domain.Entities
+﻿using System.Collections.Generic;
+
+namespace Micro.Auth.Domain.Entities
 {
     public class User
     {
@@ -7,5 +9,6 @@
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public IEnumerable<string> Roles { get; set; } = new List<string>();
     }
 }
