@@ -21,7 +21,7 @@ namespace Micro.Auth.Authentication.API.Controllers
         {
             try
             {
-                var accessTokenResponse =_authenticationService.Authenticate(authenticationRequest.Username, authenticationRequest.Password);
+                var accessTokenResponse =_authenticationService.Authenticate(authenticationRequest.Username, authenticationRequest.Password, authenticationRequest.Audience);
                 return Ok(accessTokenResponse);
             }
             catch(SecurityException)

@@ -35,12 +35,12 @@ namespace Micro.Auth.Application.Authentication
             }
         };
 
-        public TokenResponse Authenticate(string username, string password)
+        public TokenResponse Authenticate(string username, string password, Audience audience)
         {
             if (_users.SingleOrDefault(user => user.Username.Equals(username) && user.Password.Equals(password)) == null)
                 throw new SecurityException("Invalid credentials");
 
-            var accessToken = _tokenGenerator.GenerateToken(username);
+            var accessToken = _tokenGenerator.GenerateToken(username, audience);
             return new TokenResponse(accessToken);
         }
     }

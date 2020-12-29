@@ -4,6 +4,6 @@ namespace Micro.Auth.Application.Interfaces
 {
     public interface IAuthenticationService
     {
-        TokenResponse Authenticate(string username, string password);
+        TokenResponse Authenticate(string username, string password, Audience audience);
     }
 }

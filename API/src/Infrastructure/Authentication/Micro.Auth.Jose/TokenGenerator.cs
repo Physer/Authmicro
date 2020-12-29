@@ -1,4 +1,5 @@
 ﻿using Jose;
+using Micro.Auth.Application.Authentication;
 using Micro.Auth.Application.Interfaces;
 using Micro.Auth.Domain.Options;
 using Microsoft.Extensions.Options;
@@ -18,7 +19,7 @@ namespace Micro.Auth.Jose
             _authenticationOptions = authenticationOptions.Value;
         }
 
-        public string GenerateToken(string username)
+        public string GenerateToken(string username, Audience audience)
         {
             if (string.IsNullOrWhiteSpace(username))
                 throw new Exception("No username provided");
@@ -34,7 +35,8 @@ namespace Micro.Auth.Jose
             {
                 { "sub", username },
                 { "exp", expiryTimestamp },
-                { "iss", _authenticationOptions.Issuer }
+                { "iss", _authenticationOptions.Issuer },
+                { "aud", audience.ToString() }
             };
 
             var secretKey = Encoding.UTF8.GetBytes(_authenticationOptions.Secret);
