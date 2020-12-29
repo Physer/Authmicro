@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>ecbe940c-d672-4f55-92d8-a2fcee08a61f</UserSecretsId>
+    <UserSecretsId>f2613b2f-0c71-4c85-9bd7-a8d82b8ec0b3</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
   </PropertyGroup>
@@ -12,6 +12,15 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.1" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Micro.Auth.Application\Micro.Auth.Application.csproj" />
+    <ProjectReference Include="..\..\Startup\Micro.Auth.Startup\Micro.Auth.Startup.csproj" />
   </ItemGroup>
 
 </Project>

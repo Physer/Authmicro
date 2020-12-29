@@ -1,11 +1,18 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Micro.Auth.Content.API
+namespace Micro.Auth.Administration.API
 {
     public class Startup
     {
@@ -23,7 +30,7 @@ namespace Micro.Auth.Content.API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Micro.Auth.Content.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Micro.Auth.Administration.API", Version = "v1" });
             });
         }
 
@@ -34,7 +41,7 @@ namespace Micro.Auth.Content.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Micro.Auth.Content.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Micro.Auth.Administration.API v1"));
             }
 
             app.UseHttpsRedirection();
