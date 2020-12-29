@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\Micro.Auth.Application\Micro.Auth.Application.csproj" />
     <ProjectReference Include="..\..\Startup\Micro.Auth.Startup\Micro.Auth.Startup.csproj" />
   </ItemGroup>
