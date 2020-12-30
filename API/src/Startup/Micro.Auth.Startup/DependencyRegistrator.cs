@@ -2,6 +2,7 @@
 using Micro.Auth.Application.Interfaces;
 using Micro.Auth.Domain.Options;
 using Micro.Auth.Jose;
+using Micro.Auth.JsonPlaceHolder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,6 +14,7 @@ namespace Micro.Auth.Startup
         {
             services.AddSingleton<IAuthenticationService, AuthenticationService>();
             services.AddTransient<ITokenGenerator, TokenGenerator>();
+            services.AddTransient<IAccountRepository, AccountRepository>();
         }
 
         public static void RegisterOptions(this IServiceCollection services, IConfiguration configuration)

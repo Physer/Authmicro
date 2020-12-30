@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Micro.Auth.Application\Micro.Auth.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Authentication\Micro.Auth.Jose\Micro.Auth.Jose.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\JsonPlaceHolder\Micro.Auth.JsonPlaceHolder\Micro.Auth.JsonPlaceHolder.csproj" />
   </ItemGroup>
 
 </Project>

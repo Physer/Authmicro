@@ -23,9 +23,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Micro.Auth.Jose", "src\Infrastructure\Authentication\Micro.Auth.Jose\Micro.Auth.Jose.csproj", "{0DE4C938-0F8A-473E-B478-4A3376A52B07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Administration.API", "src\Presentation\Micro.Auth.Administration.API\Micro.Auth.Administration.API.csproj", "{CEB47AD6-E53C-4FB6-83AE-2314AA8A214C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Micro.Auth.Administration.API", "src\Presentation\Micro.Auth.Administration.API\Micro.Auth.Administration.API.csproj", "{CEB47AD6-E53C-4FB6-83AE-2314AA8A214C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.Forum.API", "src\Presentation\Micro.Auth.Forum.API\Micro.Auth.Forum.API.csproj", "{86C5BB2C-93B4-4E82-8619-6CDAAD07C7D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Micro.Auth.Forum.API", "src\Presentation\Micro.Auth.Forum.API\Micro.Auth.Forum.API.csproj", "{86C5BB2C-93B4-4E82-8619-6CDAAD07C7D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonPlaceHolder", "JsonPlaceHolder", "{9C5D07A7-94D4-4447-9BB8-5CBEB83FF696}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Micro.Auth.JsonPlaceHolder", "src\Infrastructure\JsonPlaceHolder\Micro.Auth.JsonPlaceHolder\Micro.Auth.JsonPlaceHolder.csproj", "{69496CE4-4592-4CF5-86E5-07C1EDA33D6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +65,10 @@ Global
 		{86C5BB2C-93B4-4E82-8619-6CDAAD07C7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C5BB2C-93B4-4E82-8619-6CDAAD07C7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C5BB2C-93B4-4E82-8619-6CDAAD07C7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69496CE4-4592-4CF5-86E5-07C1EDA33D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69496CE4-4592-4CF5-86E5-07C1EDA33D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69496CE4-4592-4CF5-86E5-07C1EDA33D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69496CE4-4592-4CF5-86E5-07C1EDA33D6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +82,8 @@ Global
 		{0DE4C938-0F8A-473E-B478-4A3376A52B07} = {8FC01FEB-CEDE-420B-9961-B4329627F3B5}
 		{CEB47AD6-E53C-4FB6-83AE-2314AA8A214C} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
 		{86C5BB2C-93B4-4E82-8619-6CDAAD07C7D5} = {D2AD2BA2-4191-4420-9067-A098901C3C87}
+		{9C5D07A7-94D4-4447-9BB8-5CBEB83FF696} = {2DF3EC90-96B9-410F-9694-10EA49DAD257}
+		{69496CE4-4592-4CF5-86E5-07C1EDA33D6F} = {9C5D07A7-94D4-4447-9BB8-5CBEB83FF696}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {265DF246-F8DB-4AAA-9629-3CAECC64EB14}
