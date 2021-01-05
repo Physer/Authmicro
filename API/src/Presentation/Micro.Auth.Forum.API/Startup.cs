@@ -1,3 +1,4 @@
+using Micro.Auth.Domain.Constants;
 using Micro.Auth.Startup;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -20,6 +21,11 @@ namespace Micro.Auth.Forum.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureJwtAuthentication(Configuration);
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(AuthenticationConstants.ReaderPolicyName, policy => policy.RequireRole(AuthenticationConstants.ReaderRole));
+            });
 
             services.RegisterHttpClients();
             services.AddControllers();
@@ -40,11 +46,9 @@ namespace Micro.Auth.Forum.API
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

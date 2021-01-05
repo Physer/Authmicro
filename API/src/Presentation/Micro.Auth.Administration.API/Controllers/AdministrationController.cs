@@ -18,10 +18,6 @@ namespace Micro.Auth.Administration.API.Controllers
             _accountRepository = accountRepository;
         }
 
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult Entry() => Ok("Please call a secured endpoint!");
-
         [HttpGet("users")]
         public async Task<IActionResult> GetUsers() => Ok(await _accountRepository.GetAccounts());
     }

@@ -1,15 +1,11 @@
 using Micro.Auth.Domain.Constants;
-using Micro.Auth.Domain.Options;
 using Micro.Auth.Startup;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Text;
 
 namespace Micro.Auth.Administration.API
 {
@@ -25,28 +21,7 @@ namespace Micro.Auth.Administration.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var authenticationOptions = Configuration.GetSection(AuthenticationOptions.ConfigurationEntry).Get<AuthenticationOptions>();
-            var tokenParameters = new TokenValidationParameters
-            {
-                ValidateIssuerSigningKey = true,
-                RequireSignedTokens = true,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationOptions?.Secret)),
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidIssuer = authenticationOptions.Issuer,
-                ValidAudience = authenticationOptions.Audience
-            };
-            services
-            .AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = tokenParameters;
-            });
-
+            services.ConfigureJwtAuthentication(Configuration);
             services.AddAuthorization(options =>
             {
                 options.AddPolicy(AuthenticationConstants.AdministratorPolicyName, policy => policy.RequireRole(AuthenticationConstants.AdministratorRole));
