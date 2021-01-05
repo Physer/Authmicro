@@ -1,3 +1,4 @@
+using Micro.Auth.Startup;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,7 @@ namespace Micro.Auth.Forum.API
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.RegisterHttpClients();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

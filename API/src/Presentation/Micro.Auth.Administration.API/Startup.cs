@@ -52,7 +52,7 @@ namespace Micro.Auth.Administration.API
                 options.AddPolicy(AuthenticationConstants.AdministratorPolicyName, policy => policy.RequireRole(AuthenticationConstants.AdministratorRole));
             });
 
-            services.AddHttpClient();
+            services.RegisterHttpClients();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
