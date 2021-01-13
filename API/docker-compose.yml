@@ -1,0 +1,37 @@
+services:
+  micro.auth.authentication:
+    container_name: "micro.auth.authentication"
+    image: "physer/micro.auth.authentication"
+    environment:
+      - ASPNETCORE_URLS=https://+;http://+
+      - ASPNETCORE_HTTPS_PORT=5001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=P@ssw0rd!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5000:80"
+      - "5001:443"
+  micro.auth.forum:
+    container_name: "micro.auth.forum"
+    image: "physer/micro.auth.forum"
+    environment:
+      - ASPNETCORE_URLS=https://+;http://+
+      - ASPNETCORE_HTTPS_PORT=7001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=P@ssw0rd!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "7000:80"
+      - "7001:443"
+  micro.auth.administration:
+    container_name: "micro.auth.administration"
+    image: "physer/micro.auth.administration"
+    environment:
+      - ASPNETCORE_URLS=https://+;http://+
+      - ASPNETCORE_HTTPS_PORT=6001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=P@ssw0rd!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "6000:80"
+      - "6001:443"
