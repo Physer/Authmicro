@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authentication-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: authentication
+  template:
+    metadata:
+      labels:
+        app: authentication
+    spec:
+      containers:
+      - name: authentication
+        image: physer/micro.auth.authentication
+        ports:
+        - containerPort: 5001
+        imagePullPolicy: IfNotPresent
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: forum-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: forum
+  template:
+    metadata:
+      labels:
+        app: forum
+    spec:
+      containers:
+      - name: forum
+        image: physer/micro.auth.forum
+        ports:
+        - containerPort: 7001
+        imagePullPolicy: IfNotPresent
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: administration-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: administration
+  template:
+    metadata:
+      labels:
+        app: administration
+    spec:
+      containers:
+      - name: administration
+        image: physer/micro.auth.administration
+        ports:
+        - containerPort: 6001
+        imagePullPolicy: IfNotPresent
