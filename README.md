@@ -65,7 +65,9 @@ The access token that you receive is only valid for a limited period of time and
 #### Endpoints
 There is one endpoint available. Use this to authenticate your user credentials and try to receive an access token:
 **URL**: `/users/authenticate`
+
 **Method**: `POST`
+
 **Request body** All fields are required
 ```json
 {
@@ -123,8 +125,17 @@ The Administration API is a restricted API that can retrieve user data. In a rea
 #### Endpoints
 For the Administration API, there is one endpoint available. This endpoint allows you to query user data.
 
+**URL**: `/administration/users`
+
+**Method**: `GET`
+
+**Headers** Authorization - Bearer xxxx
+
+**Success response**
+The response contains user information
+
 *Condition*: The specified access token contains the correct credential data
-*Authentication required*: **Yes**. Bearer token authorization is used. Supply an 'Authorization' header with your access token in the form of 'Bearer xxxx' where xxxx is replaced with your access token.
+*Authentication required*: **Yes**
 *Code*: 200 OK
 *Content example*:
 ```json
@@ -186,9 +197,17 @@ The Forum API is responsible for retrieving forum posts. These posts can be view
 
 #### Endpoints
 One endpoint is available. To retrieve forum posts.
+**URL**: `/posts`
+
+**Method**: `GET`
+
+**Headers** Authorization - Bearer xxxx
+
+**Success response**
+The response contain forum posts
 
 *Condition*: The specified access token contains the correct credential data
-*Authentication required*: **Yes**. Bearer token authorization is used. Supply an 'Authorization' header with your access token in the form of 'Bearer xxxx' where xxxx is replaced with your access token.
+*Authentication required*: **Yes**
 *Code*: 200 OK
 *Content example*:
 ```json
