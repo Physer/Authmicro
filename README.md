@@ -64,6 +64,7 @@ The cornerstone of this application is the Authentication API. This API is solel
 The access token that you receive is only valid for a limited period of time and is tailored specific to your user. You can only use this access token for the sources your user has the correct rights to.
 #### Endpoints
 There is one endpoint available. Use this to authenticate your user credentials and try to receive an access token:
+
 **URL**: `/users/authenticate`
 
 **Method**: `POST`
